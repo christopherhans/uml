@@ -1,9 +1,9 @@
 @startuml
 
 
-Vcenter *-- Cluster
-Cluster *-- Host
-Host *-- VirtualMachine
+Vcenter *- Cluster
+Cluster *- Host
+Host *- VirtualMachine
 
 
 class Vcenter {
