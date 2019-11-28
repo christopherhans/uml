@@ -1,0 +1,48 @@
+@startuml
+
+
+Vcenter *-- Cluster
+Cluster *-- Host
+Host *-- VirtualMachine
+
+
+class Vcenter {
+    -- Attributes --
+    + str uuid
+    + str name
+    + list clusters
+    + str datacenter
+    -- Methods --
+    + add_cluster()
+
+}
+
+class Cluster {
+    -- Attributes --
+    + str name
+    + str uuid
+    + list hosts
+    -- Methods --
+    + add_host()
+
+}
+
+class Host {
+    -- Attributes --
+    + str name
+    + str uuid
+    + list vms
+    -- Methods --
+    + add_vm()
+
+}
+
+class VirtualMachine {
+    -- Attributes --
+    + str uuid
+    + str project_id
+    + name
+
+}
+
+@enduml
